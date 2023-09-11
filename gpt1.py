@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 import openai
+import os #환경변수
 
 app = Flask(__name__)
 
-# OpenAI API 키 설정
-openai.api_key = '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'
+# 환경 변수에서 OpenAI API 키 읽어오기
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 @app.route('/')
 def home():
