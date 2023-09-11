@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with GPT-3</title>
+    <style>
+        /* 대화 입력창 스타일 */
+        input[type="text"] {
+            width: 80%; /* 입력 창의 폭을 조절할 수 있습니다. */
+            padding: 10px; /* 입력 창의 내부 패딩을 조절할 수 있습니다. */
+            font-size: 16px; /* 글꼴 크기를 조절할 수 있습니다. */
+        }
+
+        /* 제출 버튼 스타일 */
+        input[type="submit"] {
+            padding: 10px 20px; /* 제출 버튼의 패딩을 조절할 수 있습니다. */
+            font-size: 16px; /* 제출 버튼의 글꼴 크기를 조절할 수 있습니다. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat with GPT-3@ssu</h1>
+    <form action="/askgpt" method="post">
+        <input type="text" name="user_input" placeholder="Ask a question...">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="response">
+        {% if response %}
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
