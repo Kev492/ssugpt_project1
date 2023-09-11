@@ -5,7 +5,8 @@ import os #환경변수
 app = Flask(__name__)
 
 # 환경 변수에서 OpenAI API 키 읽어오기
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = OPENAI_API_KEY
+#os.getenv('OPENAI_API_KEY')
 
 @app.route('/')
 def home():
